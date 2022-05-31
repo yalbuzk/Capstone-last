@@ -1,0 +1,55 @@
+
+<div *ngIf="data$">
+  <div class="text-center">
+    <p style="font-size:medium;font-weight:700">Graph</p>
+</div>
+
+<div class="container">
+    <div style="display: block;">
+   <!--The content below is only a placeholder and can be replaced.-->
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [dataLabels]="chartOptions.dataLabels"
+    [grid]="chartOptions.grid"
+    [stroke]="chartOptions.stroke"
+    [title]="chartOptions.title"
+  ></apx-chart>
+</div>
+
+      </div>
+      
+
+</div>
+<div class="text-center">
+    <p style="font-size:medium;font-weight:700">Data</p>
+</div>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">AccX</th>
+        <th scope="col">AccY</th>
+        <th scope="col">AccZ</th>
+        <th scope="col">Coordinates</th>
+        <th scope="col">Data</th>
+        <th scope="col">Device</th>
+        <th scope="col">Place</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data$; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.accx}}</td>
+        <td>{{item.accy}}</td>
+        <td>{{item.accz}}</td>
+        <td>{{item.coordinates}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.device}}</td>
+        <td>{{item.place}}</td>
+</tbody>
+  </table>
+  
+</div>

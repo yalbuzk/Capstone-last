@@ -1,0 +1,25 @@
+*{
+    font-size: x-small;
+}
+
+p {
+    font-family: Lato;
+  }
+  
+  .website {
+    font: normal 14px sans-serif;
+    letter-spacing: 0.5px;
+    display: block;
+    cursor: pointer;
+    background-color: #313b3f;
+    color: #fcdb42;
+    padding: 10px;
+    text-decoration: none;
+    margin-bottom: 15px;
+  }
+  
+  #lineChart {
+    margin: 10px auto;
+    min-width: 400px;
+  }
+  
